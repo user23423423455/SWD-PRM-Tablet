@@ -16,6 +16,7 @@
   },
   "build": {
     "appId": "pl.nachash.swdprm.kmcr",
+    "publish": null
     "productName": "SWD PRM Tablet KMCR",
     "directories": {
       "output": "dist"
