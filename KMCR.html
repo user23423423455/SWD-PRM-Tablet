@@ -145,7 +145,17 @@
     .checkbox-pair { gap:12px; min-width:50px; }
   }
 </style>
-</head>
+<style>
+html,body{max-width:100%;overflow-x:hidden}
+.gcs-group{margin:0 0 4px}
+.gcs-group>strong{display:block;margin-bottom:5px}
+.gcs-row{display:flex;align-items:center;gap:5px;min-height:27px;width:100%;font-size:16px}
+.gcs-row>span:first-child{flex:0 1 auto;min-width:0;white-space:normal}
+.gcs-leader{flex:1 1 auto;min-width:8px;border-bottom:2px dotted #8ba0ac;height:1px;align-self:center}
+.gcs-row input.checkbox{flex:0 0 20px;margin:0}
+.gcs-score{flex:0 0 25px;text-align:right;white-space:nowrap}
+.small-box{max-width:100%}
+</style></head>
 <body>
 <div id="pdf-content">
 
@@ -176,28 +186,28 @@
 
       <div class="small-box">
         <h3>Glasgow Coma Scale</h3>
-        <strong>Otwieranie oczu</strong><br>
-        spontanicznie ........<input type="checkbox" class="checkbox"> ........ (4)<br>
-        na głos ........<input type="checkbox" class="checkbox"> ........ (3)<br>
-        na ból ........<input type="checkbox" class="checkbox"> ........ (2)<br>
-        brak ........<input type="checkbox" class="checkbox"> ........ (1)<br><br>
-
-        <strong>Reakcja słowna</strong><br>
-        zorientowany ........<input type="checkbox" class="checkbox"> ........ (5)<br>
-        splątany ........<input type="checkbox" class="checkbox"> ........ (4)<br>
-        niewłaściwe słowa ........<input type="checkbox" class="checkbox"> ........ (3)<br>
-        niezrozumiałe dźwięki ........<input type="checkbox" class="checkbox"> ........ (2)<br>
-        brak ........<input type="checkbox" class="checkbox"> ........ (1)<br><br>
-
-        <strong>Reakcja ruchowa</strong><br>
-        wykonuje polecenia ........<input type="checkbox" class="checkbox"> ........ (6)<br>
-        lokalizacja bólu ........<input type="checkbox" class="checkbox"> ........ (5)<br>
-        ucieczka od bólu ........<input type="checkbox" class="checkbox"> ........ (4)<br>
-        zgięciowa ........<input type="checkbox" class="checkbox"> ........ (3)<br>
-        wyprostna ........<input type="checkbox" class="checkbox"> ........ (2)<br>
-        brak ........<input type="checkbox" class="checkbox"> ........ (1)<br><br>
-
-        <strong>Suma:</strong> <input type="text" class="textbox" style="width: 60px; height: 30px;">
+        <div class="gcs-group"><strong data-pl="Otwieranie oczu" data-en="Eye opening">Otwieranie oczu</strong>
+          <div class="gcs-row"><span data-pl="spontanicznie" data-en="spontaneously">spontanicznie</span><span class="gcs-leader"></span><input type="checkbox" class="checkbox"><span class="gcs-score">(4)</span></div>
+          <div class="gcs-row"><span data-pl="na głos" data-en="to voice">na głos</span><span class="gcs-leader"></span><input type="checkbox" class="checkbox"><span class="gcs-score">(3)</span></div>
+          <div class="gcs-row"><span data-pl="na ból" data-en="to pain">na ból</span><span class="gcs-leader"></span><input type="checkbox" class="checkbox"><span class="gcs-score">(2)</span></div>
+          <div class="gcs-row"><span data-pl="brak" data-en="none">brak</span><span class="gcs-leader"></span><input type="checkbox" class="checkbox"><span class="gcs-score">(1)</span></div>
+        </div><br>
+        <div class="gcs-group"><strong data-pl="Reakcja słowna" data-en="Verbal response">Reakcja słowna</strong>
+          <div class="gcs-row"><span data-pl="zorientowany" data-en="oriented">zorientowany</span><span class="gcs-leader"></span><input type="checkbox" class="checkbox"><span class="gcs-score">(5)</span></div>
+          <div class="gcs-row"><span data-pl="splątany" data-en="confused">splątany</span><span class="gcs-leader"></span><input type="checkbox" class="checkbox"><span class="gcs-score">(4)</span></div>
+          <div class="gcs-row"><span data-pl="niewłaściwe słowa" data-en="inappropriate words">niewłaściwe słowa</span><span class="gcs-leader"></span><input type="checkbox" class="checkbox"><span class="gcs-score">(3)</span></div>
+          <div class="gcs-row"><span data-pl="niezrozumiałe dźwięki" data-en="incomprehensible sounds">niezrozumiałe dźwięki</span><span class="gcs-leader"></span><input type="checkbox" class="checkbox"><span class="gcs-score">(2)</span></div>
+          <div class="gcs-row"><span data-pl="brak" data-en="none">brak</span><span class="gcs-leader"></span><input type="checkbox" class="checkbox"><span class="gcs-score">(1)</span></div>
+        </div><br>
+        <div class="gcs-group"><strong data-pl="Reakcja ruchowa" data-en="Motor response">Reakcja ruchowa</strong>
+          <div class="gcs-row"><span data-pl="wykonuje polecenia" data-en="obeys commands">wykonuje polecenia</span><span class="gcs-leader"></span><input type="checkbox" class="checkbox"><span class="gcs-score">(6)</span></div>
+          <div class="gcs-row"><span data-pl="lokalizacja bólu" data-en="localizes pain">lokalizacja bólu</span><span class="gcs-leader"></span><input type="checkbox" class="checkbox"><span class="gcs-score">(5)</span></div>
+          <div class="gcs-row"><span data-pl="ucieczka od bólu" data-en="withdraws from pain">ucieczka od bólu</span><span class="gcs-leader"></span><input type="checkbox" class="checkbox"><span class="gcs-score">(4)</span></div>
+          <div class="gcs-row"><span data-pl="zgięciowa" data-en="flexion">zgięciowa</span><span class="gcs-leader"></span><input type="checkbox" class="checkbox"><span class="gcs-score">(3)</span></div>
+          <div class="gcs-row"><span data-pl="wyprostna" data-en="extension">wyprostna</span><span class="gcs-leader"></span><input type="checkbox" class="checkbox"><span class="gcs-score">(2)</span></div>
+          <div class="gcs-row"><span data-pl="brak" data-en="none">brak</span><span class="gcs-leader"></span><input type="checkbox" class="checkbox"><span class="gcs-score">(1)</span></div>
+        </div><br>
+        <strong data-pl="Suma:" data-en="Total:">Suma:</strong> <input type="text" class="textbox" style="width: 60px; height: 30px;">
       </div>
 
       <div class="small-box">
@@ -1174,7 +1184,31 @@
 <h4>  ‎  ‎ <u>‎‎Made by: Nachash ©2026 </u><h4>  
 
 <script src="./html2canvas.min.js"></script>
-<script>if (typeof html2canvas === "undefined") { document.write('<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"><\/script>'); }</script>
+<script>
+const KMCR_TRANSLATIONS={"Karta Medycznych Czynności Ratunkowych": "Medical Rescue Activities Record", "Karta Medycznych Czynności Ratunkowych (KMCR)": "Medical Rescue Activities Record (KMCR)", "Oznaczenie dysponenta zespołu ratownictwa medycznego (ZRM)": "Emergency Medical Service Provider (EMS) Details", "Zespół Ratownictwa Medycznego:": "Emergency Medical Team:", "Kod ZRM realizującego zlecenie:": "EMS team code:", "Numer zlecenia wyjazdu:": "Dispatch order number:", "I - Wywiad": "I - History", "II - Badanie": "II - Examination", "RTS": "RTS", "Częstość oddechów": "Respiratory rate", "RR skurczowe": "Systolic blood pressure", "Suma:": "Total:", "Układ Oddechowy": "Respiratory System", "Częstość oddechów:": "Respiratory rate:", "Duszność": "Shortness of breath", "Sinica": "Cyanosis", "Bezdech": "Apnea", "Szmer prawidłowy": "Normal breath sounds", "Furczenie": "Rhonchi", "Świsty": "Wheezing", "Rzężenia": "Crackles", "Brak szmerów": "Absent breath sounds", "Inne": "Other", "Saturacja": "Oxygen saturation", "Źrenice": "Pupils", "Reakcja na światło:": "Light reaction:", "Prawidłowa": "Normal", "Powolna": "Sluggish", "Brak": "None", "Szerokośc:": "Size:", "Normalna": "Normal", "Wąska": "Narrow", "Szeroka": "Wide", "Ciśnienie Tętnicze": "Blood Pressure", "Tętno": "Pulse", "Miarowe": "Regular", "Niemiar.": "Irregular", "Objawy": "Symptoms", "Wstrząs": "Shock", "NZK": "Cardiac arrest", "Obj. oponowe": "Meningeal signs", "Drgawki": "Seizures", "Afazja": "Aphasia", "Wymioty": "Vomiting", "Biegunka": "Diarrhea", "Krwawienie": "Bleeding", "Obrzęki": "Edema", "Zasłabnięcie": "Fainting", "Ciąża": "Pregnancy", "Poród": "Childbirth", "Chor.zakaźna": "Infectious disease", "Skóra": "Skin", "Wygląd:": "Appearance:", "W normie": "Normal", "Blada": "Pale", "Rumień": "Redness", "Zażółcenie": "Jaundice", "Sinica obw.": "Peripheral cyanosis", "Sinica centr.": "Central cyanosis", "Wilgotność:": "Moisture:", "Wilgotna": "Moist", "Sucha": "Dry", "Temperatura": "Temperature", "Chłodna": "Cool", "Ciepła": "Warm", "Jama Brzuszna": "Abdomen", "Bolesność palpacyjna": "Tenderness on palpation", "Brak perystaltyki": "Absent bowel sounds", "Objawy otrzewnowe": "Peritoneal signs", "Ocena Psycho-Ruch": "Psychomotor Status", "Spowolniały": "Slowed", "Pobudzony": "Agitated", "Agresywny": "Aggressive", "Tony serca": "Heart sounds", "Czyste / Głośne": "Clear / Loud", "Stłumione": "Muffled", "Niedowład / Porażenie": "Paresis / Paralysis", "Kończyna Górna": "Upper limb", "Kończyna Dolna": "Lower limb", "Zapach z ust": "Breath odor", "Rozpuszczalnik org.": "Organic solvent", "Alkohol": "Alcohol", "Poziom Glukozy": "Blood glucose", "EKG": "ECG", "Rytm zatokowy": "Sinus rhythm", "Tachykardia nadkomorowa": "Supraventricular tachycardia", "Tachykardia komorowa": "Ventricular tachycardia", "Migotanie / Trzepotanie": "Fibrillation / Flutter", "przedsionków": "atrial", "AV blok": "AV block", "sVES": "PACs", "VES": "PVCs", "VF/VT": "VF/VT", "Asystolia": "Asystole", "PEA": "PEA", "Rozrusznik": "Pacemaker", "OZW": "Acute coronary syndrome", "Zawał": "Myocardial infarction", "Inne: ................................................": "Other: ................................................", "Obrażenia": "Injuries", "Złamanie otwarte": "Open fracture", "Złamanie zamknięte": "Closed fracture", "Zwichnięcie": "Dislocation", "Stłuczenie": "Contusion", "Rany": "Wounds", "Krwotok z rany": "Wound bleeding", "Zmiażdżenie": "Crush injury", "Amputacja": "Amputation", "Ból nieurazowy": "Non-traumatic pain", "Oparzenie": "Burn", "Opis": "Description", "III - Postępowanie z pacjentem": "III - Patient Treatment", "Odsysanie": "Suction", "Went. workiem": "Bag ventilation", "Rurka UG": "Oropharyngeal airway", "Intubacja": "Intubation", "Respirator": "Ventilator", "Tlenoter. bierna": "Passive oxygen therapy", "Defibrylacja": "Defibrillation", "Stymulacja zew.": "External pacing", "Kardiowersja": "Cardioversion", "Masaż serca": "Chest compressions", "Teletransmisja": "Teletransmission", "Kołnież": "Cervical collar", "Deska ortoped.": "Spinal board", "Materac próż.": "Vacuum mattress", "Unieruchomienie": "Immobilization", "Opatrunek": "Dressing", "linia zyl. obw.": "Peripheral IV line", "linia zyl. cent.": "Central venous line", "Cewkowanie": "Catheterization", "Sonda zołąd.": "Gastric tube", "Monitorowanie": "Monitoring", "Zalecenia / Uwagi kierownika zespołu": "Team leader recommendations / notes", "Zastosowane Leki, Wyroby Medyczne (Nazwa,Dawka,Droga Podania)": "Medications and medical devices used (Name, Dose, Route of administration)", "IV - Dane pacjenta:": "IV - Patient Details:", "Imię i Nazwisko": "Full Name", "Adres zamieszkania:": "Home address:", "Data urodzenia:": "Date of birth:", "PESEL:": "National ID number:", "Strona zrobiona w celach Roleplay'u.": "This page is intended for roleplay purposes.", "Wszelkie kopie zabronione.": "All copies prohibited.", "Made by: Nachash ©2026": "Made by: Nachash ©2026"};
+function applyKMCRLanguage(lang){
+  const en=lang==='en';
+  document.documentElement.lang=en?'en':'pl';
+  document.title=en?'Medical Rescue Activities Record':'Karta Medycznych Czynności Ratunkowych';
+  document.querySelectorAll('[data-pl][data-en]').forEach(el=>{el.textContent=en?el.dataset.en:el.dataset.pl;});
+  const walker=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT);
+  const nodes=[];while(walker.nextNode())nodes.push(walker.currentNode);
+  nodes.forEach(node=>{
+    if(node.parentElement && node.parentElement.closest('[data-pl][data-en]'))return;
+    if(node.dataset.kmcrOriginal===undefined)node.dataset.kmcrOriginal=node.nodeValue;
+    const raw=node.dataset.kmcrOriginal;const key=raw.trim();
+    const translated=KMCR_TRANSLATIONS[key]||(key==='Kliknij aby wpisać'?'Click to enter':key);
+    node.nodeValue=raw.replace(key,en?translated:key);
+  });
+  document.querySelectorAll('[placeholder]').forEach(el=>{
+    if(el.dataset.originalPlaceholder===undefined)el.dataset.originalPlaceholder=el.placeholder;
+    el.placeholder=en?(el.dataset.originalPlaceholder==='Kliknij aby wpisać'?'Click to enter':el.dataset.originalPlaceholder):el.dataset.originalPlaceholder;
+  });
+}
+window.addEventListener('message',e=>{if(e.data&&e.data.type==='swdprm-language')applyKMCRLanguage(e.data.language)});
+document.addEventListener('DOMContentLoaded',()=>applyKMCRLanguage(localStorage.getItem('swdprm-language')||'pl'));
+</script>
+\nif (typeof html2canvas === "undefined") { document.write('<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"><\/script>'); }</script>
 <script>
 async function exportKMCR() {
   if (typeof html2canvas !== "function") { alert("Nie udało się załadować modułu zapisu obrazu. Sprawdź połączenie z internetem."); return false; }
